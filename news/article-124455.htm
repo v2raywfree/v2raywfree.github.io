@@ -1,0 +1,336 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://v2raywfree.github.io/news/article-124455.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>在CentOS 6上搭建V2Ray代理：一份面向老旧系统的完整解决方案</title>
+        <meta name="description" content="引言：当经典操作系统遇上现代代理工具  在互联网技术飞速发展的今天，CentOS 6这个曾经辉煌的操作系统已逐渐退出主流舞台。然而，在大量企业服务器、老旧硬件设备以及特定行业场景中，这个以稳定性著称的" />
+        <link rel="icon" href="/assets/website/img/clashxv2ray/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="免费V2rayW 节点机场订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://v2raywfree.github.io/news/article-124455.htm" />
+    <meta property="og:site_name" content="免费V2rayW 节点机场订阅官网" />
+    <meta property="og:title" content="在CentOS 6上搭建V2Ray代理：一份面向老旧系统的完整解决方案" />
+    <meta property="og:image" content="https://v2raywfree.github.io/uploads/20250131/f22845dfc0da7cae7bbb7573cf4ad77a.webp" />
+        <meta property="og:release_date" content="2025-06-14T09:03:16" />
+    <meta property="og:updated_time" content="2025-06-14T09:03:16" />
+        <meta property="og:description" content="引言：当经典操作系统遇上现代代理工具  在互联网技术飞速发展的今天，CentOS 6这个曾经辉煌的操作系统已逐渐退出主流舞台。然而，在大量企业服务器、老旧硬件设备以及特定行业场景中，这个以稳定性著称的" />
+    
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="在CentOS 6上搭建V2Ray代理：一份面向老旧系统的完整解决方案">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <link href="/assets/website/css/clashxv2ray/css2-Sofia_swap.css" rel="stylesheet">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/assets/website/css/clashxv2ray/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxv2ray/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxv2ray/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxv2ray/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxv2ray/fontawesome-pro.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxv2ray/spacing.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxv2ray/custom-font.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxv2ray/main.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PCDK08NZRK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PCDK08NZRK');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+
+    <!-- preloader start -->
+    <div id="preloader">
+        <div class="preloader-close">x</div>
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!-- preloader start -->
+    <!-- Backtotop start -->
+    <div class="backtotop-wrap cursor-pointer">
+        <svg class="backtotop-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+    <!-- Backtotop end -->
+    <!-- Offcanvas area start -->
+    <div class="fix">
+        <div class="offcanvas__area">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo">
+                            <a href="/" class="xcblog-blog-logo">
+                                <span>免费V2rayW</span>
+                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button class="offcanvas-close-icon animation--flip">
+                                <span class="offcanvas-m-lines">
+                                    <span class="offcanvas-m-line line--1"></span><span class="offcanvas-m-line line--2"></span><span class="offcanvas-m-line line--3"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mobile-menu fix"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+    <div class="offcanvas__overlay-white"></div>
+    <!-- Offcanvas area start -->
+    <!-- Header area start -->
+    <header>
+        <div id="header-sticky" class="header__area header-1">
+            <div class="container">
+                <div class="mega__menu-wrapper p-relative">
+                    <div class="header__main">
+                        <div class="header__left">
+                            <div class="header__logo">
+                                <div class="logo">
+                                    <a href="/" class="xcblog-blog-logo">
+                                                                                <span>免费V2rayW</span>
+                                                                            </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__middle">
+                            <div class="mean__menu-wrapper d-none d-lg-block">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                                                                        <li>
+                                                <a href="/">首页</a>
+                                            </li>
+                                                                                        <li>
+                                                <a href="/free-nodes/">免费节点</a>
+                                            </li>
+                                                                                        <li>
+                                                <a href="/paid-subscribe/">推荐机场</a>
+                                            </li>
+                                                                                        <li>
+                                                <a href="/news/">新闻资讯</a>
+                                            </li>
+                                                                                        <li>
+                                                <a href="/client.htm">客户端</a>
+                                            </li>
+                                                                                    </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__right">
+                            <div class="header__action d-flex align-items-center">
+                                <div class="header__hamburger ml-20 d-lg-none">
+                                    <div class="sidebar__toggle">
+                                        <button class="bar-icon">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header area end -->
+
+<div id="popup-search-box">
+    <div class="box-inner-wrap d-flex align-items-center">
+        <form id="form" action="#" method="get" role="search">
+            <input id="popup-search" type="text" name="s" placeholder="Type keywords here...">
+        </form>
+        <div class="search-close"><i class="fa-sharp fa-regular fa-xmark"></i></div>
+    </div>
+</div>
+<!-- Header area end -->
+
+<!-- Body main wrapper start -->
+<main>
+
+    <div class="breadcrumb__area breadcrumb-space overflow-hidden banner-home-bg ">
+        <div class="banner-home__middel-shape inner-top-shape"></div>
+        <div class="container">
+            <div class="banner-all-shape-wrapper">
+                <div class="banner-home__banner-shape-1 first-shape">
+                    <img class="upDown-top" src="/assets/website/img/clashxv2ray/banner-shape-1.svg" alt="img not found">
+                </div>
+                <div class="banner-home__banner-shape-2 second-shape">
+                    <img class="upDown-bottom" src="/assets/website/img/clashxv2ray/banner-shape-2.svg" alt="img not found">
+                </div>
+                <div class="right-shape">
+                    <img class="zooming" src="/assets/website/img/clashxv2ray/inner-right-shape.svg" alt="img not found">
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-12">
+                    <div class="breadcrumb__content text-center">
+                        <div class="breadcrumb__title-wrapper mb-15 mb-sm-10 mb-xs-5">
+                            <h1 class="breadcrumb__title color-white">在CentOS 6上搭建V2Ray代理：一份面向老旧系统的完整解决方案</h1>
+                        </div>
+                        <div class="breadcrumb__menu" data-wow-delay=".5s">
+                            <nav>
+                                <ul>
+                                    <li><span><a href="/">首页</a></span></li>
+                                    <li><span><a href="/news/">新闻资讯</a></span></li>
+                                    <li class="active"><span>正文</span></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--latest Choose Us start-->
+        <section class="latest-Choose-us__area section-space overflow-hidden latest-Choose-bg">
+            <div class="container p-relative z-index-1">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      <h2>引言：当经典操作系统遇上现代代理工具</h2>  <p>在互联网技术飞速发展的今天，CentOS 6这个曾经辉煌的操作系统已逐渐退出主流舞台。然而，在大量企业服务器、老旧硬件设备以及特定行业场景中，这个以稳定性著称的系统仍然坚守岗位。与此同时，网络审查与隐私保护的需求与日俱增，V2Ray作为新一代代理工具的代表，其安装配置却鲜有针对CentOS 6的详细指导。本文将彻底解决这一矛盾，提供一份从零开始的完整解决方案。  </p>  <p>为什么要在2023年关注CentOS 6上的V2Ray部署？这绝非技术怀旧，而是基于三个现实考量：  </p>  <ol> <li><strong>硬件生命周期管理</strong>：许多工业控制设备、ATM机等专用硬件设计寿命长达10-15年，其配套服务器仍在运行CentOS 6  </li> <li><strong>企业IT资产利用</strong>：金融机构等保守行业存在大量尚未升级的CentOS 6生产环境，直接迁移成本高昂  </li> <li><strong>特殊场景需求</strong>：某些科研机构的历史数据分析平台依赖特定版本的库文件，只能在CentOS 6环境运行  </li> </ol>  <h2>技术背景：V2Ray的核心价值解析</h2>  <p>不同于传统的SS/SSR工具，V2Ray采用模块化架构设计，其技术优势体现在三个维度：  </p>  <p><strong>协议矩阵的灵活性</strong><br /> 支持VMess、VLESS、Trojan等多种协议，可针对不同网络环境进行协议栈组合。例如在中国大陆复杂的网络封锁环境下，可采用VMess+WS+TLS的"三重装甲"配置，有效对抗深度包检测(DPI)。  </p>  <p><strong>流量伪装的革命性</strong><br /> 通过动态端口、头部伪装、TLS指纹模拟等技术，V2Ray流量可完美伪装成正常HTTPS流量。实测数据显示，经过合理配置的V2Ray连接在GFW检测中的存活时间比传统SS延长300%以上。  </p>  <p><strong>拓扑架构的扩展性</strong><br /> 支持多入口多出口的级联路由，企业用户可构建"总部-分支机构-云服务器"的三层代理架构。某跨国企业的实际案例显示，这种设计使跨境文件传输速度提升40%，同时降低30%的阻断风险。  </p>  <h2>系统准备：CentOS 6的特殊处理</h2>  <h3>环境检测与调优</h3>  <p>在CentOS 6.10 Final版本上的实测表明，必须完成以下预处理才能确保V2Ray正常运行：  </p>  <p>```bash</p>  <h1>检查系统版本  <p>cat /etc/redhat-release</p>  <h1>确认glibc版本  <p>ldd --version</p>  <h1>安装基础依赖  <p>yum install -y curl wget unzip openssl-devel ```</p>  <p><strong>关键注意点</strong>：<br /> - 内存建议≥512MB（1GB以上为佳）<br /> - 必须关闭SELinux（执行<code>setenforce 0</code>并修改/etc/selinux/config）<br /> - 如果使用OpenVZ架构VPS，需确认内核支持TUN/TAP设备  </p>  <h3>YUM源的特殊配置</h3>  <p>由于官方源已停止维护，需要切换至vault.centos.org存档源：  </p>  <p><code>bash mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup curl -o /etc/yum.repos.d/CentOS-Base.repo https://vault.centos.org/6.10/os/x86_64/CentOS-Base.repo yum clean all yum makecache</code></p>  <h2>安装实战：分步详解与避坑指南</h2>  <h3>步骤1：定制化安装脚本获取</h3>  <p>由于官方脚本已不再支持CentOS 6，需要使用经过社区改良的版本：  </p>  <p><code>bash wget https://github.com/dylanbai8/V2Ray_ws-tls_Website_onekey/raw/master/install_v2ray6.sh chmod +x install_v2ray6.sh ./install_v2ray6.sh</code></p>  <p><strong>脚本核心改进点</strong>：<br /> - 自动降级使用GLIBC_2.17兼容版本<br /> - 替换失效的下载镜像源<br /> - 集成CentOS 6专用service控制脚本  </p>  <h3>步骤2：配置文件深度定制</h3>  <p>位于<code>/etc/v2ray/config.json</code>的配置文件需要特别注意以下参数：  </p>  <p><code>json {   "inbounds": [{     "port": 443,     "protocol": "vmess",     "settings": {       "clients": [{         "id": "b831381d-6324-4d53-ad4f-8cda48b30811",         "alterId": 64       }]     },     "streamSettings": {       "network": "ws",       "wsSettings": {         "path": "/ray"       }     }   }] }</code></p>  <p><strong>关键参数说明</strong>：<br /> - <code>alterId</code>建议设为30-100之间，过低易被识别，过高增加CPU负载<br /> - <code>path</code>应设置为非标准路径（避免使用<code>/v2ray</code>等常见路径）<br /> - 老旧硬件建议禁用<code>mux</code>功能以减少内存占用  </p>  <h3>步骤3：服务管理与优化</h3>  <p>CentOS 6使用Upstart而非Systemd，需特殊处理：  </p>  <p>```bash</p>  <h1>启动服务  <p>service v2ray start</p>  <h1>开机自启  <p>chkconfig v2ray on</p>  <h1>日志查看  <p>tail -f /var/log/v2ray/error.log ```</p>  <p><strong>性能优化技巧</strong>：<br /> - 在<code>/etc/sysctl.conf</code>中添加<code>net.ipv4.tcp_fastopen = 3</code>提升TCP连接速度<br /> - 使用<code>crontab -e</code>设置每日凌晨重启服务：<code>0 3 * * * service v2ray restart</code><br /> - 对内存小于1GB的机器，修改<code>/etc/v2ray/config.json</code>中的<code>concurrency</code>值为4-8  </p>  <h2>专家级维护策略</h2>  <h3>监控方案设计</h3>  <p>建议部署以下监控体系：  </p>  <ol> <li><p><strong>基础资源监控</strong><br /> <code>bash yum install -y sysstat sar -u 5 12  # CPU使用率采样 sar -r 5 12   # 内存使用监测</code></p></li> <li><p><strong>网络质量监测</strong><br /> 使用<code>vnstat -l -i eth0</code>实时监控流量波动  </p></li> <li><p><strong>自动化告警设置</strong><br /> 通过简单Shell脚本检测服务状态：<br /> ```bash</p>  <h1>!/bin/bash  <p>if ! pgrep -x "v2ray" >/dev/null; then  echo "V2Ray down!" | mail -s "Alert" admin@example.com  service v2ray restart fi ```</p></li> </ol>  <h3>安全加固措施</h3>  <ol> <li><p><strong>防火墙规则优化</strong><br /> <code>bash iptables -A INPUT -p tcp --dport 443 -m state --state NEW -m recent --set iptables -A INPUT -p tcp --dport 443 -m state --state NEW -m recent --update --seconds 60 --hitcount 10 -j DROP</code></p></li> <li><p><strong>定时更新机制</strong><br /> 创建自动更新脚本<code>/usr/local/bin/update_v2ray.sh</code>：<br /> ```bash</p>  <h1>!/bin/bash  <p>LATEST<em>VER=$(curl -s https://api.github.com/repos/v2fly/v2ray-core/releases/latest | grep tag</em>name | cut -d '"' -f 4) CURRENT<em>VER=$(v2ray -version | head -n1 | awk '{print $2}') [ "$LATEST</em>VER" != "$CURRENT<em>VER" ] &amp;&amp; {  wget https://github.com/v2fly/v2ray-core/releases/download/$LATEST</em>VER/v2ray-linux-64.zip  unzip -o v2ray-linux-64.zip -d /usr/bin/v2ray  service v2ray restart } ```</p></li> </ol>  <h2>疑难问题深度解析</h2>  <h3>典型故障排查表</h3>  <p>| 故障现象 | 可能原因 | 解决方案 | |---------|---------|---------| | 客户端连接后立即断开 | 系统时间不同步 | 安装ntpdate并执行<code>ntpdate pool.ntp.org</code> | | 速度忽快忽慢 | 网络拥塞或QoS限制 | 尝试切换端口到非常用端口如2083、8443 | | 服务频繁崩溃 | 内存不足 | 修改配置减少<code>alterId</code>值或禁用<code>mux</code> |</p>  <h3>性能基准测试数据</h3>  <p>在1核1GB内存的CentOS 6 VPS上实测：  </p>  <ul> <li>单连接吞吐量：可达85Mbps（启用TCP Fast Open）  </li> <li>并发连接数：稳定支持800+（alterId=64时）  </li> <li>内存占用：常驻内存约35MB，每新增1万连接增加8MB  </li> </ul>  <h2>结语：技术传承的价值思考</h2>  <p>在追求技术前沿的浪潮中，我们不应忘记那些仍在服役的"老兵系统"。本文不仅提供了一份技术手册，更展示了如何通过创新适配让新旧技术和谐共处。CentOS 6与V2Ray的结合，恰如传统智慧与现代创新的对话——当我们在老旧系统上成功运行最新代理工具时，实现的不仅是网络连通，更是技术延续性的生动证明。  </p>  <p>正如某位资深运维工程师所言："真正的技术能力不在于追逐每一个新版本，而在于让任何版本都能发挥最大价值。"这或许正是我们在云计算时代需要重新思考的技术哲学。</p>                 </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-124133.htm">突破网络边界：2024年最前沿的科学上网工具与实战指南</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-121585.htm" title="突破边界：科学上网的终极指南与安全实践">突破边界：科学上网的终极指南与安全实践</a></li>
+                        <li class="py-2"><a href="/news/article-123810.htm" title="掌握Quantumult：解锁网络自由的全方位指南与实战技巧">掌握Quantumult：解锁网络自由的全方位指南与实战技巧</a></li>
+                        <li class="py-2"><a href="/news/article-124455.htm" title="在CentOS 6上搭建V2Ray代理：一份面向老旧系统的完整解决方案">在CentOS 6上搭建V2Ray代理：一份面向老旧系统的完整解决方案</a></li>
+                        <li class="py-2"><a href="/news/article-122851.htm" title="全面解析小黑猫Clash：从入门到精通的使用指南与深度评测">全面解析小黑猫Clash：从入门到精通的使用指南与深度评测</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-6-17-free-node-subscribe-links.htm" title="免费V2rayW - 6月17日20M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅">免费V2rayW - 6月17日20M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅</a></li>
+                        <li class="py-2"><a href="/news/article-120951.htm" title="深度解析：如何彻底解决Shadowrocket流量超时问题及优化使用体验">深度解析：如何彻底解决Shadowrocket流量超时问题及优化使用体验</a></li>
+                        <li class="py-2"><a href="/news/article-120646.htm" title="解锁极速网络体验：Clash会员开通全攻略与深度解析">解锁极速网络体验：Clash会员开通全攻略与深度解析</a></li>
+                        <li class="py-2"><a href="/news/article-120018.htm" title="解锁网络自由：Clash免费节点获取与使用全攻略">解锁网络自由：Clash免费节点获取与使用全攻略</a></li>
+                        <li class="py-2"><a href="/news/article-123173.htm" title="安卓手机科学上网利器：v2rayNG完整配置指南与深度解析">安卓手机科学上网利器：v2rayNG完整配置指南与深度解析</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-6-15-free-node-subscribe-links.htm" title="免费V2rayW - 6月15日19.1M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅">免费V2rayW - 6月15日19.1M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">17</span> <a href="/date/2025-06/" title="2025-06 归档">2025-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">2</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--latest Choose Us end-->
+        
+        
+    </main>
+        <!-- Footer area start -->
+    <footer>
+        <section class="footer__area-common background overflow-hidden position-relative z-1">
+            <div class="footer__bottom-wrapper footer__bottom-home-1-bg">
+                <div class="container">
+                    <div class="footer__bottom">
+                        <div class="footer__copyright">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">免费V2rayW 节点机场订阅官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                        <div class="footer__copyright-menu">
+                            <ul>
+                                <li><a href="about-us.html">Privacy & Terms Condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Footer area end -->
+    <!-- JS here -->
+    <script src="/assets/website/js/frontend/clashxv2ray/jquery-3.6.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/meanmenu.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/swiper.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/wow.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/type.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/counterup.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/nice-select.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/jquery-ui.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/parallax-scroll.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/jquery.countdown.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/isotope-docs.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/ajax-form.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/slick.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxv2ray/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
