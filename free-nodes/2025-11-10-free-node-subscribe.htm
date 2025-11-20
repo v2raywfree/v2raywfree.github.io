@@ -377,9 +377,9 @@ Clash 目前有多个不同的版本和分支，每个版本在 UI 设计、配�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 全局代理与规则代理的区别是什么？</h5></div>
+    <div class="panel-heading"><h5>Nekoray 如何实现节点延迟自动切换？</h5></div>
     <div class="panel-body">
-        全局代理会将所有流量通过节点转发，适合游戏或全局科学上网；规则代理只针对指定应用或 IP 走节点，优化带宽利用和网络效率，根据不同需求选择使用模式。<hr />    </div>
+        Nekoray 支持配置策略组（Policy Group），用户可设置 URL 测试或周期检测机制，根据延迟自动选择最优节点。此功能能提升稳定性，尤其适合多线路机场订阅用户。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 如何根据延迟自动切换节点？</h5></div>
@@ -387,14 +387,14 @@ Clash 目前有多个不同的版本和分支，每个版本在 UI 设计、配�
         PassWall2 会定期测试节点延迟，并结合策略组自动切换到延迟最低的节点。无需用户手动操作，即可保证网页、视频和游戏流量的高速稳定访问，提高整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 如何实现节点延迟自动切换？</h5></div>
+    <div class="panel-heading"><h5>WinXray 是否支持多订阅源？</h5></div>
     <div class="panel-body">
-        Nekoray 支持配置策略组（Policy Group），用户可设置 URL 测试或周期检测机制，根据延迟自动选择最优节点。此功能能提升稳定性，尤其适合多线路机场订阅用户。<hr />    </div>
+        支持。用户可导入多个订阅 URL，每个订阅源独立管理。通过切换订阅源或合并策略组，可灵活管理节点，实现不同地区或用途的线路分配。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 策略组如何自动优化网络访问？</h5></div>
+    <div class="panel-heading"><h5>Nekoray 节点订阅失败如何解决？</h5></div>
     <div class="panel-body">
-        PassWall2 结合策略组和延迟检测功能，自动选择最佳节点处理网页、视频和游戏流量。无需手动切换，保证访问速度和稳定性，提升整体网络体验。<hr />    </div>
+        确认订阅 URL 是否有效并检查网络通畅。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，可确保稳定科学上网体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hysteria2 协议的主要特点是什么？</h5></div>
@@ -402,19 +402,19 @@ Clash 目前有多个不同的版本和分支，每个版本在 UI 设计、配�
         Hysteria2 是新一代基于 QUIC 的高速代理协议，支持自适应拥塞控制和零 RTT 连接。相比传统 TCP 协议，它能在高延迟或丢包环境下保持稳定速度，特别适合跨境访问或实时传输场景。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下表现如何？</h5></div>
+    <div class="panel-body">
+        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定移动网络。结合策略组和多出口节点，可提高访问速度和连接稳定性，保证用户体验流畅。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 能否同步 iCloud 配置？</h5></div>
     <div class="panel-body">
         可以。Surfboard 支持 iCloud 同步功能，用户可在不同苹果设备上共享同一配置文件。这样即使更换手机或重装系统，也能自动恢复节点与分流设置。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 是否支持多订阅源？</h5></div>
+    <div class="panel-heading"><h5>Netch 全局代理与规则代理的区别是什么？</h5></div>
     <div class="panel-body">
-        支持。用户可导入多个订阅 URL，每个订阅源独立管理。通过切换订阅源或合并策略组，可灵活管理节点，实现不同地区或用途的线路分配。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下表现如何？</h5></div>
-    <div class="panel-body">
-        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定移动网络。结合策略组和多出口节点，可提高访问速度和连接稳定性，保证用户体验流畅。<hr />    </div>
+        全局代理会将所有流量通过节点转发，适合游戏或全局科学上网；规则代理只针对指定应用或 IP 走节点，优化带宽利用和网络效率，根据不同需求选择使用模式。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 连接延迟过高该如何优化？</h5></div>
@@ -422,9 +422,9 @@ Clash 目前有多个不同的版本和分支，每个版本在 UI 设计、配�
         可尝试切换传输协议（如 WS、gRPC）、调整 MTU 或启用 MUX 多路复用功能。同时检查服务器地理位置、带宽和延迟，并选择最优节点以降低延迟。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 节点订阅失败如何解决？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 策略组如何自动优化网络访问？</h5></div>
     <div class="panel-body">
-        确认订阅 URL 是否有效并检查网络通畅。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，可确保稳定科学上网体验。    </div>
+        PassWall2 结合策略组和延迟检测功能，自动选择最佳节点处理网页、视频和游戏流量。无需手动切换，保证访问速度和稳定性，提升整体网络体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -454,15 +454,15 @@ Clash 目前有多个不同的版本和分支，每个版本在 UI 设计、配�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2"><a href="/free-nodes/2025-10-19-clash-windows.htm" title="免费V2rayW - 10月19日20.6M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点免费节点订阅">免费V2rayW - 10月19日20.6M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-26-free-shadowrocket-node.htm" title="免费V2rayW - 10月26日19.2M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点免费节点订阅">免费V2rayW - 10月26日19.2M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-12-free-ssr-subscribe.htm" title="免费V2rayW - 11月12日18.8M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点免费节点订阅">免费V2rayW - 11月12日18.8M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-6-clash-v2ray-ss-ssr.htm" title="免费V2rayW - 10月6日20.1M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点免费节点订阅">免费V2rayW - 10月6日20.1M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-10-node-share.htm" title="免费V2rayW - 10月10日22.2M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点免费节点订阅">免费V2rayW - 10月10日22.2M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-15-free-high-speed-nodes.htm" title="免费V2rayW - 10月15日18.2M/S|免费Singbox节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点免费节点订阅">免费V2rayW - 10月15日18.2M/S|免费Singbox节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-12-free-clash-subscribe.htm" title="免费V2rayW - 10月12日20.3M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点免费节点订阅">免费V2rayW - 10月12日20.3M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-11-free-shadowrocket-node.htm" title="免费V2rayW - 11月11日21.1M/S|免费Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点免费节点订阅">免费V2rayW - 11月11日21.1M/S|免费Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-20-free-v2ray-subscribe.htm" title="免费V2rayW - 11月20日20M/S|免费Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点免费节点订阅">免费V2rayW - 11月20日20M/S|免费Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-7-free-v2ray-subscribe.htm" title="免费V2rayW - 10月7日18.7M/S|免费V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点免费节点订阅">免费V2rayW - 10月7日18.7M/S|免费V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点免费节点订阅</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-10-11-free-v2ray-subscribe.htm" title="免费V2rayW - 10月11日19.4M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点免费节点订阅">免费V2rayW - 10月11日19.4M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-27-free-subscribe-node.htm" title="免费V2rayW - 10月27日21.5M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点免费节点订阅">免费V2rayW - 10月27日21.5M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-31-node-share.htm" title="免费V2rayW - 10月31日18.4M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点免费节点订阅">免费V2rayW - 10月31日18.4M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-13-free-shadowrocket-node.htm" title="免费V2rayW - 11月13日21.4M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点免费节点订阅">免费V2rayW - 11月13日21.4M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-22-shadowrocket-node.htm" title="免费V2rayW - 10月22日20.2M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点免费节点订阅">免费V2rayW - 10月22日20.2M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-14-clash-windows.htm" title="免费V2rayW - 11月14日19.5M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点免费节点订阅">免费V2rayW - 11月14日19.5M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-16-free-ssr-subscribe.htm" title="免费V2rayW - 10月16日21.5M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点免费节点订阅">免费V2rayW - 10月16日21.5M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-9-free-shadowrocket-node.htm" title="免费V2rayW - 10月9日20.1M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点免费节点订阅">免费V2rayW - 10月9日20.1M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点免费节点订阅</a></li>
                     </ul>
     </div>
 </div>
@@ -474,7 +474,7 @@ Clash 目前有多个不同的版本和分支，每个版本在 UI 设计、配�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
