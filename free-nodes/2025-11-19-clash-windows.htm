@@ -485,24 +485,14 @@ Clash支持多种协议统一管理，适合进阶用户。</p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 是否可以管理多客户端节点？</h5></div>
+    <div class="panel-heading"><h5>SSR 的协议和混淆组合如何选择最适合的？</h5></div>
     <div class="panel-body">
-        可以。Nekobox 与 Shadowsocks、Clash 等客户端独立运行，互不干扰。结合策略组使用，可灵活分配节点，实现多客户端管理和流量优化。<hr />    </div>
+        选择模拟 HTTPS 或 HTTP 的混淆方式，再搭配 AEAD 或协议插件，可以隐藏流量特征并提高抗封锁能力。不同网络环境需测试，选择最稳定和可靠的组合。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mihomo 的节点批量操作功能有哪些优势？</h5></div>
     <div class="panel-body">
         Mihomo 支持批量导入、删除和更新节点，结合策略组管理，可高效维护大量节点。用户可以快速选择最佳节点，优化访问速度，同时减少手动操作的复杂度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 的 gRPC 传输适合移动网络吗？</h5></div>
-    <div class="panel-body">
-        gRPC 传输支持长连接和多路复用，减少握手次数，降低延迟。对于移动网络和高延迟环境，它能提供稳定和高速的访问体验，同时降低掉线和延迟波动风险。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 的 TUN 模式与系统代理有何区别？</h5></div>
-    <div class="panel-body">
-        TUN 模式直接拦截 IP 层流量，实现全局代理，而系统代理通常仅影响支持代理的应用。TUN 更适合游戏、视频或全局科学上网场景，确保所有流量经过代理节点。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 节点延迟高、丢包严重，常见排查步骤有哪些？</h5></div>
@@ -520,6 +510,16 @@ Clash支持多种协议统一管理，适合进阶用户。</p>
         选择混淆方式时应根据网络环境和封锁程度，例如 tls1.2_ticket_auth 可模拟 HTTPS 流量。合理组合协议和混淆可提升节点稳定性和抗封锁能力，确保长期科学上网体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Mellow 的 TUN 模式与系统代理有何区别？</h5></div>
+    <div class="panel-body">
+        TUN 模式直接拦截 IP 层流量，实现全局代理，而系统代理通常仅影响支持代理的应用。TUN 更适合游戏、视频或全局科学上网场景，确保所有流量经过代理节点。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekobox 是否可以管理多客户端节点？</h5></div>
+    <div class="panel-body">
+        可以。Nekobox 与 Shadowsocks、Clash 等客户端独立运行，互不干扰。结合策略组使用，可灵活分配节点，实现多客户端管理和流量优化。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Mihomo 节点分组如何自动切换？</h5></div>
     <div class="panel-body">
         用户可按延迟、地区或用途将节点分组，并启用策略组。系统会根据节点健康状况和延迟自动切换到最佳节点，保证网页浏览、视频播放和游戏连接稳定顺畅。<hr />    </div>
@@ -530,9 +530,9 @@ Clash支持多种协议统一管理，适合进阶用户。</p>
         Quantumult X 通过规则分组来控制流量走向。用户可自定义策略组，将特定网站流量指向不同节点。编辑规则文件时，可利用 GEOIP、DOMAIN-SUFFIX 等指令精确管理网络行为。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的协议和混淆组合如何选择最适合的？</h5></div>
+    <div class="panel-heading"><h5>VMess 的 gRPC 传输适合移动网络吗？</h5></div>
     <div class="panel-body">
-        选择模拟 HTTPS 或 HTTP 的混淆方式，再搭配 AEAD 或协议插件，可以隐藏流量特征并提高抗封锁能力。不同网络环境需测试，选择最稳定和可靠的组合。    </div>
+        gRPC 传输支持长连接和多路复用，减少握手次数，降低延迟。对于移动网络和高延迟环境，它能提供稳定和高速的访问体验，同时降低掉线和延迟波动风险。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -561,16 +561,16 @@ Clash支持多种协议统一管理，适合进阶用户。</p>
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-10-31-node-share.htm" title="免费V2rayW - 10月31日18.4M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点免费节点订阅">免费V2rayW - 10月31日18.4M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-2-clash-node-daily-updates.htm" title="免费V2rayW - 11月2日22.4M/S|免费SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点订阅">免费V2rayW - 11月2日22.4M/S|免费SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-25-clash-node.htm" title="免费V2rayW - 10月25日21.2M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点免费节点订阅">免费V2rayW - 10月25日21.2M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-27-free-high-speed-nodes.htm" title="免费V2rayW - 11月27日20.6M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/Clash节点/SSR节点免费节点订阅">免费V2rayW - 11月27日20.6M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/Clash节点/SSR节点免费节点订阅</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-10-7-free-v2ray-subscribe.htm" title="免费V2rayW - 10月7日18.7M/S|免费V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点免费节点订阅">免费V2rayW - 10月7日18.7M/S|免费V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-11-free-shadowrocket-node.htm" title="免费V2rayW - 11月11日21.1M/S|免费Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点免费节点订阅">免费V2rayW - 11月11日21.1M/S|免费Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-12-free-clash-subscribe.htm" title="免费V2rayW - 10月12日20.3M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点免费节点订阅">免费V2rayW - 10月12日20.3M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-4-free-shadowrocket-node.htm" title="免费V2rayW - 10月4日22.8M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点免费节点订阅">免费V2rayW - 10月4日22.8M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点免费节点订阅</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-10-free-node-subscribe.htm" title="免费V2rayW - 11月10日18.6M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点免费节点订阅">免费V2rayW - 11月10日18.6M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-12-free-ssr-subscribe.htm" title="免费V2rayW - 11月12日18.8M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点免费节点订阅">免费V2rayW - 11月12日18.8M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-4-free-v2ray.htm" title="免费V2rayW - 11月4日18.5M/S|免费Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点免费节点订阅">免费V2rayW - 11月4日18.5M/S|免费Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-11-free-v2ray-subscribe.htm" title="免费V2rayW - 10月11日19.4M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点免费节点订阅">免费V2rayW - 10月11日19.4M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-26-free-shadowrocket-node.htm" title="免费V2rayW - 10月26日19.2M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点免费节点订阅">免费V2rayW - 10月26日19.2M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-7-free-v2ray-subscribe.htm" title="免费V2rayW - 11月7日19.5M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点免费节点订阅">免费V2rayW - 11月7日19.5M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-15-clash-v2ray-ss-ssr.htm" title="免费V2rayW - 11月15日22.4M/S|免费Clash节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点免费节点订阅">免费V2rayW - 11月15日22.4M/S|免费Clash节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-28-free-node-subscribe-links.htm" title="免费V2rayW - 11月28日18.5M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点免费节点订阅">免费V2rayW - 11月28日18.5M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-25-clash-node.htm" title="免费V2rayW - 10月25日21.2M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点免费节点订阅">免费V2rayW - 10月25日21.2M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-8-clash-windows.htm" title="免费V2rayW - 10月8日18.6M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点免费节点订阅">免费V2rayW - 10月8日18.6M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点免费节点订阅</a></li>
                     </ul>
     </div>
 </div>
@@ -582,7 +582,7 @@ Clash支持多种协议统一管理，适合进阶用户。</p>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
