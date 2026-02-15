@@ -332,27 +332,13 @@ v2rayng支持VMess、VLess、Shadowsocks等协议。您可以根据需要选择�
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2026-2-7-free-node-subscribe-links.htm">免费V2rayW - 2月7日20.1M/S|免费V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点免费节点订阅</a></p>
+        <p>下一个：<a href="/free-nodes/2026-2-9-free-shadowrocket-node.htm">免费V2rayW - 2月9日19.3M/S|免费Singbox节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点免费节点订阅</a></p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何在 macOS 上运行 ClashX？</h5></div>
+    <div class="panel-heading"><h5>如何用 systemd 管理 V2Ray/ Sing-box 服务？</h5></div>
     <div class="panel-body">
-        ClashX 是 macOS 平台专用客户端，用户可在 GitHub 下载 DMG 安装包。安装后导入订阅即可使用，支持系统代理集成、自动更新和延迟测试。界面简洁直观，深受苹果用户欢迎。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2RayN 如何开启系统代理？</h5></div>
-    <div class="panel-body">
-        打开 V2RayN 后，点击右下角托盘图标，选择“设置系统代理”或“开启全局模式”。这样系统所有网络请求都会通过代理转发。适用于浏览器、下载器等需要全局代理的场景。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 是否需要证书？</h5></div>
-    <div class="panel-body">
-        是的，Trojan 必须使用有效的 TLS 证书才能运行。推荐使用 Let's Encrypt 免费证书。若证书过期或配置错误，客户端将无法建立加密连接，导致无法访问外部网络。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow TUN 模式与 SOCKS5 代理有什么区别？</h5></div>
-    <div class="panel-body">
-        TUN 模式拦截系统 IP 层流量，实现全局代理；SOCKS5 代理通常只影响指定应用。TUN 更适合全局加速，如游戏、视频和浏览器流量，提高网络稳定性和覆盖范围。<hr />    </div>
+        创建 systemd 单元文件，指定 ExecStart 指令并设置 Restart=on-failure 与合适的 User/Group。启用服务并使用 `systemctl enable` 与 `systemctl start` 管理，便于开机自启与日志集中收集。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 的节点测速如何优化策略组选择？</h5></div>
@@ -360,19 +346,14 @@ v2rayng支持VMess、VLess、Shadowsocks等协议。您可以根据需要选择�
         Shadowrocket 会测量节点延迟和丢包率，将低延迟节点优先使用。结合策略组和规则文件，可保证网页、视频和游戏流量走最佳节点，提高访问速度和连接稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 如何实现按应用分流？</h5></div>
-    <div class="panel-body">
-        Surfboard 支持通过策略组和规则文件按应用分流，将不同应用的流量分配到不同节点。这样可保证游戏或视频走低延迟节点，提高访问速度并优化网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 能否同步 iCloud 配置？</h5></div>
     <div class="panel-body">
         可以。Surfboard 支持 iCloud 同步功能，用户可在不同苹果设备上共享同一配置文件。这样即使更换手机或重装系统，也能自动恢复节点与分流设置。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的 PAC 模式适合哪些使用场景？</h5></div>
+    <div class="panel-heading"><h5>V2RayN 如何开启系统代理？</h5></div>
     <div class="panel-body">
-        PAC 模式可根据规则文件动态判断流量是否走代理。适合访问国内外混合网站环境，无需手动切换节点，程序自动分流，提高网络访问效率和稳定性。<hr />    </div>
+        打开 V2RayN 后，点击右下角托盘图标，选择“设置系统代理”或“开启全局模式”。这样系统所有网络请求都会通过代理转发。适用于浏览器、下载器等需要全局代理的场景。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 支持哪些类型的分流规则？</h5></div>
@@ -380,9 +361,29 @@ v2rayng支持VMess、VLess、Shadowsocks等协议。您可以根据需要选择�
         QuantumultX 支持域名、IP、端口、协议和用户自定义脚本分流。结合策略组使用，可实现精准流量控制，如广告屏蔽、视频加速和游戏优化，提高访问速度和体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何用 systemd 管理 V2Ray/ Sing-box 服务？</h5></div>
+    <div class="panel-heading"><h5>WinXray 的 PAC 模式适合哪些使用场景？</h5></div>
     <div class="panel-body">
-        创建 systemd 单元文件，指定 ExecStart 指令并设置 Restart=on-failure 与合适的 User/Group。启用服务并使用 `systemctl enable` 与 `systemctl start` 管理，便于开机自启与日志集中收集。    </div>
+        PAC 模式可根据规则文件动态判断流量是否走代理。适合访问国内外混合网站环境，无需手动切换节点，程序自动分流，提高网络访问效率和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mellow TUN 模式与 SOCKS5 代理有什么区别？</h5></div>
+    <div class="panel-body">
+        TUN 模式拦截系统 IP 层流量，实现全局代理；SOCKS5 代理通常只影响指定应用。TUN 更适合全局加速，如游戏、视频和浏览器流量，提高网络稳定性和覆盖范围。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 是否需要证书？</h5></div>
+    <div class="panel-body">
+        是的，Trojan 必须使用有效的 TLS 证书才能运行。推荐使用 Let's Encrypt 免费证书。若证书过期或配置错误，客户端将无法建立加密连接，导致无法访问外部网络。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 如何实现按应用分流？</h5></div>
+    <div class="panel-body">
+        Surfboard 支持通过策略组和规则文件按应用分流，将不同应用的流量分配到不同节点。这样可保证游戏或视频走低延迟节点，提高访问速度并优化网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何在 macOS 上运行 ClashX？</h5></div>
+    <div class="panel-body">
+        ClashX 是 macOS 平台专用客户端，用户可在 GitHub 下载 DMG 安装包。安装后导入订阅即可使用，支持系统代理集成、自动更新和延迟测试。界面简洁直观，深受苹果用户欢迎。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -411,16 +412,16 @@ v2rayng支持VMess、VLess、Shadowsocks等协议。您可以根据需要选择�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-1-11-clash-v2ray-ss-ssr.htm" title="免费V2rayW - 1月11日21.4M/S|免费Singbox节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点免费节点订阅">免费V2rayW - 1月11日21.4M/S|免费Singbox节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-27-free-v2ray.htm" title="免费V2rayW - 1月27日22.1M/S|免费Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点免费节点订阅">免费V2rayW - 1月27日22.1M/S|免费Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-2-node-share-links.htm" title="免费V2rayW - 2月2日18.9M/S|免费Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点/Trojan节点免费节点订阅">免费V2rayW - 2月2日18.9M/S|免费Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点/Trojan节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-16-node-share-links.htm" title="免费V2rayW - 1月16日20.4M/S|免费Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点免费节点订阅">免费V2rayW - 1月16日20.4M/S|免费Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-24-free-node-subscribe.htm" title="免费V2rayW - 1月24日20.7M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点免费节点订阅">免费V2rayW - 1月24日20.7M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-18-shadowrocket-node.htm" title="免费V2rayW - 1月18日20.1M/S|免费Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点免费节点订阅">免费V2rayW - 1月18日20.1M/S|免费Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-29-free-v2ray.htm" title="免费V2rayW - 1月29日22M/S|免费Shadowrocket节点/Clash节点/Singbox节点/SSR节点/Trojan节点/V2ray节点免费节点订阅">免费V2rayW - 1月29日22M/S|免费Shadowrocket节点/Clash节点/Singbox节点/SSR节点/Trojan节点/V2ray节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-31-free-node-subscribe-links.htm" title="免费V2rayW - 1月31日18.3M/S|免费Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点免费节点订阅">免费V2rayW - 1月31日18.3M/S|免费Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-23-free-ssr-node.htm" title="免费V2rayW - 1月23日22.5M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点免费节点订阅">免费V2rayW - 1月23日22.5M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-25-free-node-subscribe-links.htm" title="免费V2rayW - 1月25日19.9M/S|免费V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点免费节点订阅">免费V2rayW - 1月25日19.9M/S|免费V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-8-free-clash-subscribe.htm" title="免费V2rayW - 2月8日20.5M/S|免费Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点/V2ray节点免费节点订阅">免费V2rayW - 2月8日20.5M/S|免费Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点/V2ray节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-9-free-shadowrocket-node.htm" title="免费V2rayW - 2月9日19.3M/S|免费Singbox节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点免费节点订阅">免费V2rayW - 2月9日19.3M/S|免费Singbox节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-7-free-node-subscribe-links.htm" title="免费V2rayW - 2月7日20.1M/S|免费V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点免费节点订阅">免费V2rayW - 2月7日20.1M/S|免费V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点免费节点订阅</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-1-30-shadowrocket-node.htm" title="免费V2rayW - 1月30日18.7M/S|免费Trojan节点/SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点免费节点订阅">免费V2rayW - 1月30日18.7M/S|免费Trojan节点/SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-21-free-node-subscribe-links.htm" title="免费V2rayW - 1月21日21.4M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点免费节点订阅">免费V2rayW - 1月21日21.4M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-28-free-subscribe-node.htm" title="免费V2rayW - 1月28日22.1M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点/Trojan节点免费节点订阅">免费V2rayW - 1月28日22.1M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点/Trojan节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-14-free-shadowrocket-node.htm" title="免费V2rayW - 2月14日20M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点免费节点订阅">免费V2rayW - 2月14日20M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-10-free-subscribe-node.htm" title="免费V2rayW - 2月10日18.3M/S|免费Trojan节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点订阅">免费V2rayW - 2月10日18.3M/S|免费Trojan节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-22-clash-node-daily-updates.htm" title="免费V2rayW - 1月22日21.5M/S|免费SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点免费节点订阅">免费V2rayW - 1月22日21.5M/S|免费SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点免费节点订阅</a></li>
                     </ul>
     </div>
 </div>
@@ -432,10 +433,10 @@ v2rayng支持VMess、VLess、Shadowsocks等协议。您可以根据需要选择�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">8</span> <a href="/date/2026-02/" title="2026-02 归档">2026-02</a></h4>
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2026-02/" title="2026-02 归档">2026-02</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
             </li>
                     </ul>
     </div>
