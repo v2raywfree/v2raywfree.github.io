@@ -454,11 +454,6 @@ bash &lt;(curl -s -L https://github.com/v2fly/fhs-install-v2ray/raw/master/insta
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 节点订阅自动更新如何设置？</h5></div>
-    <div class="panel-body">
-        用户可添加订阅 URL，Nekoray 会定期自动下载并更新节点列表。保持节点最新可减少手动维护，提高节点可用性和网络连接稳定性，确保科学上网体验顺畅。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Mellow 如何配置透明代理？</h5></div>
     <div class="panel-body">
         Mellow 的透明代理功能可通过 TUN 模式或 WinDivert 实现。启用后系统流量会自动通过代理转发，无需手动设置浏览器代理，适合全局科学上网场景。<hr />    </div>
@@ -467,16 +462,6 @@ bash &lt;(curl -s -L https://github.com/v2fly/fhs-install-v2ray/raw/master/insta
     <div class="panel-heading"><h5>WinXray 的 PAC 模式有什么优势？</h5></div>
     <div class="panel-body">
         PAC 模式可根据规则动态判断流量是否走代理，无需手动切换节点。适合国内外混合访问环境，提高网络访问速度和稳定性，同时减少误操作导致的访问失败。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的域名规则如何实现分流？</h5></div>
-    <div class="panel-body">
-        Sing-box 支持按域名匹配流量，将不同网站或应用流量分配到指定节点。结合策略组自动切换低延迟节点，可优化访问速度，保证网络稳定性并提高整体体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 的规则优先级如何设置？</h5></div>
-    <div class="panel-body">
-        在 PassWall2 中，规则的匹配顺序按配置文件自上而下执行。建议将精确规则放在前面，通用规则放后面，以确保高优先级的流量优先被正确分流到指定出口。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 混淆方式如何提高抗封锁能力？</h5></div>
@@ -489,19 +474,34 @@ bash &lt;(curl -s -L https://github.com/v2fly/fhs-install-v2ray/raw/master/insta
         节点分组可按用途、地区或延迟分类，结合策略组实现自动分流。方便用户管理大量节点，快速选择最佳节点，提高访问速度和连接稳定性，同时优化维护效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 能否同步 iCloud 配置？</h5></div>
-    <div class="panel-body">
-        可以。Surfboard 支持 iCloud 同步功能，用户可在不同苹果设备上共享同一配置文件。这样即使更换手机或重装系统，也能自动恢复节点与分流设置。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS 的 Flow 参数有什么作用？</h5></div>
     <div class="panel-body">
         Flow 参数用于控制 VLESS 的传输模式，如 XTLS Vision 或 Reality 模式。它能影响性能、安全性与兼容性，需根据客户端支持情况正确匹配配置。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 的域名规则如何实现分流？</h5></div>
+    <div class="panel-body">
+        Sing-box 支持按域名匹配流量，将不同网站或应用流量分配到指定节点。结合策略组自动切换低延迟节点，可优化访问速度，保证网络稳定性并提高整体体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 的规则优先级如何设置？</h5></div>
+    <div class="panel-body">
+        在 PassWall2 中，规则的匹配顺序按配置文件自上而下执行。建议将精确规则放在前面，通用规则放后面，以确保高优先级的流量优先被正确分流到指定出口。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 节点订阅自动更新如何设置？</h5></div>
+    <div class="panel-body">
+        用户可添加订阅 URL，Nekoray 会定期自动下载并更新节点列表。保持节点最新可减少手动维护，提高节点可用性和网络连接稳定性，确保科学上网体验顺畅。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 如何实现用户流量分配？</h5></div>
     <div class="panel-body">
-        管理员可为每个用户设置带宽和流量配额。超出限制时可自动降速或阻止访问，确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和效率。    </div>
+        管理员可为每个用户设置带宽和流量配额。超出限制时可自动降速或阻止访问，确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 能否同步 iCloud 配置？</h5></div>
+    <div class="panel-body">
+        可以。Surfboard 支持 iCloud 同步功能，用户可在不同苹果设备上共享同一配置文件。这样即使更换手机或重装系统，也能自动恢复节点与分流设置。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -530,16 +530,16 @@ bash &lt;(curl -s -L https://github.com/v2fly/fhs-install-v2ray/raw/master/insta
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-1-18-shadowrocket-node.htm" title="免费V2rayW - 1月18日20.1M/S|免费Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点免费节点订阅">免费V2rayW - 1月18日20.1M/S|免费Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-16-free-node-subscribe-links.htm" title="免费V2rayW - 2月16日22.1M/S|免费Trojan节点/Clash节点/Singbox节点/V2ray节点/SSR节点/Shadowrocket节点免费节点订阅">免费V2rayW - 2月16日22.1M/S|免费Trojan节点/Clash节点/Singbox节点/V2ray节点/SSR节点/Shadowrocket节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-20-clash-v2ray-ss-ssr.htm" title="免费V2rayW - 2月20日18.9M/S|免费Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Trojan节点免费节点订阅">免费V2rayW - 2月20日18.9M/S|免费Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Trojan节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-12-free-v2ray-subscribe.htm" title="免费V2rayW - 2月12日18.5M/S|免费Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点免费节点订阅">免费V2rayW - 2月12日18.5M/S|免费Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-10-free-subscribe-node.htm" title="免费V2rayW - 2月10日18.3M/S|免费Trojan节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点订阅">免费V2rayW - 2月10日18.3M/S|免费Trojan节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点订阅</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-1-16-node-share-links.htm" title="免费V2rayW - 1月16日20.4M/S|免费Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点免费节点订阅">免费V2rayW - 1月16日20.4M/S|免费Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-29-free-v2ray.htm" title="免费V2rayW - 1月29日22M/S|免费Shadowrocket节点/Clash节点/Singbox节点/SSR节点/Trojan节点/V2ray节点免费节点订阅">免费V2rayW - 1月29日22M/S|免费Shadowrocket节点/Clash节点/Singbox节点/SSR节点/Trojan节点/V2ray节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-11-free-v2ray-subscribe.htm" title="免费V2rayW - 2月11日20.5M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Singbox节点/Clash节点免费节点订阅">免费V2rayW - 2月11日20.5M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Singbox节点/Clash节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-25-free-node-subscribe-links.htm" title="免费V2rayW - 1月25日19.9M/S|免费V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点免费节点订阅">免费V2rayW - 1月25日19.9M/S|免费V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-17-free-subscribe-node.htm" title="免费V2rayW - 2月17日18.9M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点免费节点订阅">免费V2rayW - 2月17日18.9M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-21-free-node-subscribe-links.htm" title="免费V2rayW - 2月21日21.5M/S|免费Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点免费节点订阅">免费V2rayW - 2月21日21.5M/S|免费Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-23-free-ssr-node.htm" title="免费V2rayW - 1月23日22.5M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点免费节点订阅">免费V2rayW - 1月23日22.5M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-2-node-share-links.htm" title="免费V2rayW - 2月2日18.9M/S|免费Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点/Trojan节点免费节点订阅">免费V2rayW - 2月2日18.9M/S|免费Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点/Trojan节点免费节点订阅</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-14-free-ssr-subscribe.htm" title="免费V2rayW - 1月14日21.4M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点免费节点订阅">免费V2rayW - 1月14日21.4M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-18-free-clash-subscribe.htm" title="免费V2rayW - 2月18日21.4M/S|免费V2ray节点/Singbox节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点免费节点订阅">免费V2rayW - 2月18日21.4M/S|免费V2ray节点/Singbox节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-8-free-clash-subscribe.htm" title="免费V2rayW - 2月8日20.5M/S|免费Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点/V2ray节点免费节点订阅">免费V2rayW - 2月8日20.5M/S|免费Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点/V2ray节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-6-free-clash.htm" title="免费V2rayW - 2月6日20.2M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点免费节点订阅">免费V2rayW - 2月6日20.2M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-20-clash-v2ray-ss-ssr.htm" title="免费V2rayW - 1月20日18.5M/S|免费SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点免费节点订阅">免费V2rayW - 1月20日18.5M/S|免费SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点免费节点订阅</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-22-clash-node-daily-updates.htm" title="免费V2rayW - 2月22日20.2M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/Clash节点免费节点订阅">免费V2rayW - 2月22日20.2M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/Clash节点免费节点订阅</a></li>
                     </ul>
     </div>
 </div>
@@ -551,7 +551,7 @@ bash &lt;(curl -s -L https://github.com/v2fly/fhs-install-v2ray/raw/master/insta
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">22</span> <a href="/date/2026-02/" title="2026-02 归档">2026-02</a></h4>
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2026-02/" title="2026-02 归档">2026-02</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">18</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
