@@ -513,9 +513,9 @@ A：排查订阅源、节点稳定性，并使用健康检测功能定期自动�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 节点订阅失败如何处理？</h5></div>
+    <div class="panel-heading"><h5>Surfboard 能否同步 iCloud 配置？</h5></div>
     <div class="panel-body">
-        首先确认订阅 URL 是否有效，并确保网络连接正常。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，确保稳定科学上网体验。<hr />    </div>
+        可以。Surfboard 支持 iCloud 同步功能，用户可在不同苹果设备上共享同一配置文件。这样即使更换手机或重装系统，也能自动恢复节点与分流设置。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 如何实现按域名分流？</h5></div>
@@ -523,24 +523,19 @@ A：排查订阅源、节点稳定性，并使用健康检测功能定期自动�
         PassWall2 可通过域名规则匹配请求，将流量分流至指定节点。结合策略组和自动测速，可让不同网站走不同节点，实现加速和优化访问速度的效果。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 的 QUIC 模式相比 TCP 有哪些优势？</h5></div>
-    <div class="panel-body">
-        QUIC 协议基于 UDP，可减少握手延迟并在高丢包环境下保持较好体验。Hysteria2 对 QUIC 进行了优化，支持自适应拥塞控制与加密，能在移动网络中比 TCP 拥有更快的响应速度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的规则订阅更新机制是怎样的？</h5></div>
-    <div class="panel-body">
-        Sing-box 支持远程规则订阅 URL，可自动下载并更新节点和分流规则。用户可设置更新频率，如每天或每小时，确保规则和节点始终保持最新状态，提高网络管理效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的混淆方式选择有什么讲究？</h5></div>
-    <div class="panel-body">
-        混淆方式决定流量伪装特性，不同方式适应不同封锁环境。常用方式如 tls1.2_ticket_auth 模拟 HTTPS，http_simple 模拟 HTTP 请求，根据环境选择可提高抗封锁能力。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>当 V2Ray 报错 inbound 没有监听，可能是哪些配置问题？</h5></div>
     <div class="panel-body">
         检查 inbound 配置是否包含正确的 port、protocol 与 listen 字段；确认没有端口冲突或权限问题（非 root 绑定 1024 以下端口会失败）；查看日志中具体错误信息并根据提示修复配置。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 是否支持应用分流？</h5></div>
+    <div class="panel-body">
+        支持。Surfboard 可通过策略组和规则文件将不同应用流量分配到指定节点，保证游戏、视频和浏览器流量走最优节点，提高访问速度和网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 的 QUIC 模式相比 TCP 有哪些优势？</h5></div>
+    <div class="panel-body">
+        QUIC 协议基于 UDP，可减少握手延迟并在高丢包环境下保持较好体验。Hysteria2 对 QUIC 进行了优化，支持自适应拥塞控制与加密，能在移动网络中比 TCP 拥有更快的响应速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mihomo 节点分组如何自动切换？</h5></div>
@@ -548,19 +543,24 @@ A：排查订阅源、节点稳定性，并使用健康检测功能定期自动�
         用户可按延迟、地区或用途将节点分组，并启用策略组。系统会根据节点健康状况和延迟自动切换到最佳节点，保证网页浏览、视频播放和游戏连接稳定顺畅。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 能否同步 iCloud 配置？</h5></div>
-    <div class="panel-body">
-        可以。Surfboard 支持 iCloud 同步功能，用户可在不同苹果设备上共享同一配置文件。这样即使更换手机或重装系统，也能自动恢复节点与分流设置。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 与 Shadowrocket 有什么区别？</h5></div>
     <div class="panel-body">
         两者都是 iOS 上的代理工具。Shadowrocket 功能更全面、更新更频繁，而 Surfboard 以轻量和快速见长。若只需简单分流与节点切换，Surfboard 足以满足日常使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 是否支持应用分流？</h5></div>
+    <div class="panel-heading"><h5>SSR 的混淆方式选择有什么讲究？</h5></div>
     <div class="panel-body">
-        支持。Surfboard 可通过策略组和规则文件将不同应用流量分配到指定节点，保证游戏、视频和浏览器流量走最优节点，提高访问速度和网络稳定性。    </div>
+        混淆方式决定流量伪装特性，不同方式适应不同封锁环境。常用方式如 tls1.2_ticket_auth 模拟 HTTPS，http_simple 模拟 HTTP 请求，根据环境选择可提高抗封锁能力。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 的规则订阅更新机制是怎样的？</h5></div>
+    <div class="panel-body">
+        Sing-box 支持远程规则订阅 URL，可自动下载并更新节点和分流规则。用户可设置更新频率，如每天或每小时，确保规则和节点始终保持最新状态，提高网络管理效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 节点订阅失败如何处理？</h5></div>
+    <div class="panel-body">
+        首先确认订阅 URL 是否有效，并确保网络连接正常。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，确保稳定科学上网体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -608,16 +608,16 @@ A：排查订阅源、节点稳定性，并使用健康检测功能定期自动�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-6-25-free-subscribe-node.htm" title="免费V2rayW - 6月25日18.5M/S|免费Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点免费节点订阅">免费V2rayW - 6月25日18.5M/S|免费Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点免费节点订阅</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-29-free-ssr-node.htm" title="免费V2rayW - 6月29日19.7M/S|免费Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点免费节点订阅">免费V2rayW - 6月29日19.7M/S|免费Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点免费节点订阅</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-23-free-subscribe-node.htm" title="免费V2rayW - 7月23日22M/S|免费Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点免费节点订阅">免费V2rayW - 7月23日22M/S|免费Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点免费节点订阅</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-21-free-clash-subscribe.htm" title="免费V2rayW - 7月21日21.3M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点免费节点订阅">免费V2rayW - 7月21日21.3M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点免费节点订阅</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-14-free-shadowrocket-node.htm" title="免费V2rayW - 6月14日22.1M/S|免费Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点免费节点订阅">免费V2rayW - 6月14日22.1M/S|免费Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点免费节点订阅</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-22-free-shadowrocket-node.htm" title="免费V2rayW - 6月22日19.1M/S|免费V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点免费节点订阅">免费V2rayW - 6月22日19.1M/S|免费V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点免费节点订阅</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-25-free-clash-subscribe.htm" title="免费V2rayW - 7月25日19.6M/S|免费Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点免费节点订阅">免费V2rayW - 7月25日19.6M/S|免费Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点免费节点订阅</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-12-clash-node.htm" title="免费V2rayW - 7月12日22.2M/S|免费Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点/SSR节点/Clash节点免费节点订阅">免费V2rayW - 7月12日22.2M/S|免费Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点/SSR节点/Clash节点免费节点订阅</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-6-free-ssr-subscribe.htm" title="免费V2rayW - 7月6日20.7M/S|免费SSR节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点免费节点订阅">免费V2rayW - 7月6日20.7M/S|免费SSR节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点免费节点订阅</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-23-free-node-subscribe-links.htm" title="免费V2rayW - 6月23日20.7M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点免费节点订阅">免费V2rayW - 6月23日20.7M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点免费节点订阅</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-10-free-ssr-subscribe.htm" title="免费V2rayW - 6月10日21.2M/S|免费SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点免费节点订阅">免费V2rayW - 6月10日21.2M/S|免费SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点免费节点订阅</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-clash-subscribe-2026-8-1.htm" title="免费V2rayW - 8月1日19.8M/S|免费SSR节点/Singbox节点/V2ray节点/Clash节点/Trojan节点/Shadowrocket节点免费节点订阅">免费V2rayW - 8月1日19.8M/S|免费SSR节点/Singbox节点/V2ray节点/Clash节点/Trojan节点/Shadowrocket节点免费节点订阅</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-7-1-free-v2ray-subscribe.htm" title="免费V2rayW - 7月1日22.2M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Trojan节点/Singbox节点免费节点订阅">免费V2rayW - 7月1日22.2M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Trojan节点/Singbox节点免费节点订阅</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-6-26-free-shadowrocket-node.htm" title="免费V2rayW - 6月26日19.6M/S|免费V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点免费节点订阅">免费V2rayW - 6月26日19.6M/S|免费V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点免费节点订阅</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-7-22-clash-node-daily-updates.htm" title="免费V2rayW - 7月22日20.3M/S|免费Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Singbox节点/Clash节点免费节点订阅">免费V2rayW - 7月22日20.3M/S|免费Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Singbox节点/Clash节点免费节点订阅</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-7-2-clash-node.htm" title="免费V2rayW - 7月2日22.7M/S|免费Trojan节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点免费节点订阅">免费V2rayW - 7月2日22.7M/S|免费Trojan节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点免费节点订阅</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-7-16-clash-node-daily-updates.htm" title="免费V2rayW - 7月16日19.4M/S|免费SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/Clash节点免费节点订阅">免费V2rayW - 7月16日19.4M/S|免费SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/Clash节点免费节点订阅</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-7-19-shadowrocket-node.htm" title="免费V2rayW - 7月19日22.7M/S|免费Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点免费节点订阅">免费V2rayW - 7月19日22.7M/S|免费Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点免费节点订阅</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-7-7-node-share-links.htm" title="免费V2rayW - 7月7日21.6M/S|免费Clash节点/V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点免费节点订阅">免费V2rayW - 7月7日21.6M/S|免费Clash节点/V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点免费节点订阅</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -629,7 +629,10 @@ A：排查订阅源、节点稳定性，并使用健康检测功能定期自动�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">1</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">23</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
