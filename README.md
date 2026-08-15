@@ -1,4 +1,4 @@
-# 免费V2rayW - 8月8日20.7M/S|免费Singbox节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点免费节点订阅  更新时间 2026-08-08 07:44:31
+# 免费V2rayW - 8月15日19.5M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点免费节点订阅  更新时间 2026-08-15 08:41:28
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://v2raywfree.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://v2raywfree.github.io/uploads/2026/08/0-20260808.yaml
-- https://v2raywfree.github.io/uploads/2026/08/1-20260808.yaml
-- https://v2raywfree.github.io/uploads/2026/08/2-20260808.yaml
-- https://v2raywfree.github.io/uploads/2026/08/3-20260808.yaml
-- https://v2raywfree.github.io/uploads/2026/08/4-20260808.yaml
+- https://v2raywfree.github.io/uploads/2026/08/0-20260815.yaml
+- https://v2raywfree.github.io/uploads/2026/08/1-20260815.yaml
+- https://v2raywfree.github.io/uploads/2026/08/2-20260815.yaml
+- https://v2raywfree.github.io/uploads/2026/08/3-20260815.yaml
+- https://v2raywfree.github.io/uploads/2026/08/4-20260815.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://v2raywfree.github.io/uploads/2026/08/0-20260808.txt
-- https://v2raywfree.github.io/uploads/2026/08/1-20260808.txt
-- https://v2raywfree.github.io/uploads/2026/08/2-20260808.txt
-- https://v2raywfree.github.io/uploads/2026/08/3-20260808.txt
-- https://v2raywfree.github.io/uploads/2026/08/4-20260808.txt
+- https://v2raywfree.github.io/uploads/2026/08/0-20260815.txt
+- https://v2raywfree.github.io/uploads/2026/08/1-20260815.txt
+- https://v2raywfree.github.io/uploads/2026/08/2-20260815.txt
+- https://v2raywfree.github.io/uploads/2026/08/3-20260815.txt
+- https://v2raywfree.github.io/uploads/2026/08/4-20260815.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://v2raywfree.github.io/uploads/2026/08/20260808.json
+- https://v2raywfree.github.io/uploads/2026/08/20260815.json
 
 ## 更多Clash节点订阅 ：
 
